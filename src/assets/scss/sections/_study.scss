@@ -1,0 +1,142 @@
+.study {
+	background-color: #fbf9f9;
+	&__container {
+	}
+
+	&__title {
+		margin-bottom: 50px;
+
+		font-family: var(--second-family);
+		font-weight: 900;
+		font-size: 35px;
+		text-transform: uppercase;
+		color: var(--black);
+		text-align: center;
+
+		@media screen and (max-width: 992px) {
+			margin-bottom: 30px;
+			font-size: 22px;
+		}
+	}
+
+	&__subtitle {
+		position: relative;
+
+		font-family: var(--second-family);
+		font-weight: 900;
+		font-size: 65px;
+		text-transform: uppercase;
+		text-align: right;
+		color: var(--yellow);
+
+		span {
+			font-size: 35px;
+			text-transform: lowercase;
+			@media screen and (max-width: 992px) {
+				font-size: 20px;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -6px;
+			left: 140px;
+			width: 80px;
+			height: 80px;
+			background-color: var(--yellow);
+			opacity: 1;
+			filter: blur(55px);
+			border-radius: 50%;
+			@media screen and (max-width: 992px) {
+				display: none;
+			}
+		}
+
+		&--sm {
+			color: var(--penny-blue);
+			&::before {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 992px) {
+			font-size: 35px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	&__item {
+		display: flex;
+		gap: 20px;
+		@media screen and (max-width: 992px) {
+			flex-direction: column;
+			gap: 15px;
+		}
+		&--col {
+			flex-direction: column;
+		}
+	}
+
+	&__info {
+		max-width: 280px;
+
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (max-width: 992px) {
+			max-width: 160px;
+			align-items: flex-start;
+			.text-right {
+				text-align: left;
+			}
+		}
+	}
+
+	&__text {
+		font-weight: 600;
+		font-size: 25px;
+
+		@media screen and (max-width: 992px) {
+			font-size: 18px;
+		}
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.bar {
+	flex-shrink: 0;
+	width: 125px;
+	border-radius: 15px 15px 0 0;
+	@media screen and (max-width: 768px) {
+		width: 150px;
+	}
+	@media screen and (max-width: 374px) {
+		width: 120px;
+	}
+}
+
+.bar--yellow {
+	height: 280px;
+	background: linear-gradient(180deg, #f4bc15 0%, #e8b314 100%);
+	@media screen and (max-width: 992px) {
+		height: 185px;
+	}
+}
+
+.bar--blue {
+	height: 90px;
+	background: linear-gradient(180deg, #050038 0%, #190a68 100%);
+	@media screen and (max-width: 992px) {
+		height: 115px;
+	}
+}

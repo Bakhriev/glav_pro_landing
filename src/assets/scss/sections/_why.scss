@@ -2,9 +2,12 @@
 
 .why {
 	padding-top: 100px;
+	padding-bottom: 115px;
+	background-color: #fbf9f9;
 
 	@media screen and (max-width: 992px) {
 		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 
 	&__container {
