@@ -1,0 +1,167 @@
+@use "../helpers/mixins" as *;
+
+.hero {
+	position: relative;
+	padding: 90px 0;
+	background: linear-gradient(90deg, #ebedee 0%, #fdfbfb 100%);
+
+	@media screen and (max-width: 992px) {
+		padding: 60px 0;
+	}
+
+	&__container {
+	}
+
+	&__info {
+		position: relative;
+		z-index: 1;
+		max-width: 565px;
+
+		@media screen and (max-width: 768px) {
+			margin: 0 auto;
+			padding-bottom: 200px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 15px;
+
+		font-family: var(--second-family);
+		font-weight: 900;
+		font-size: 40px;
+		text-transform: uppercase;
+		color: var(--black);
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 10px;
+
+			font-size: 27px;
+			text-align: center;
+			color: var(--black);
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 40px;
+
+		font-weight: 600;
+		font-size: 25px;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 0;
+
+			font-size: 20px;
+			text-align: center;
+		}
+	}
+
+	&__btn {
+		position: relative;
+		z-index: 1;
+
+		max-width: 500px;
+		width: 100%;
+
+		@media screen and (max-width: 768px) {
+			max-width: 320px;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+.container {
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+
+	padding: 6px 6px 6px 20px;
+
+	border-radius: 15px;
+	box-shadow: 0 8px 16px -4px rgba(22, 34, 51, 0.15);
+	background-color: var(--yellow);
+
+	font-weight: 600;
+	font-size: 20px;
+	color: var(--black);
+
+	transition:
+		background-color 150ms ease,
+		color 150ms ease;
+
+	@include hover {
+		background-color: #1c1c1c;
+		color: var(--white);
+
+		.btn__icon {
+			background-color: var(--yellow);
+			svg {
+				rotate: 45deg;
+			}
+		}
+	}
+
+	&:active {
+		background-color: #1c1c1c;
+		color: var(--white);
+
+		.btn__icon {
+			background-color: var(--yellow);
+			svg {
+				rotate: 45deg;
+			}
+		}
+		scale: 0.99;
+	}
+
+	@media screen and (max-width: 768px) {
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 48px;
+		height: 48px;
+		background-color: var(--white);
+		border-radius: 14px;
+
+		transition: background-color 150ms ease;
+
+		@media screen and (max-width: 768px) {
+			width: 42px;
+			height: 42px;
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		svg {
+			transition: rotate 150ms ease;
+		}
+	}
+}
+
+.btn-reset {
+}
+
+.hide-on-mobile {
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+}
