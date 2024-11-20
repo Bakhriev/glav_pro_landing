@@ -10,4 +10,27 @@ const mobileMenu = () => {
 	});
 };
 
+const tab = () => {
+	const tab = document.querySelector(".tab");
+	const panels = tab.querySelectorAll(".tab__panel");
+	const buttons = tab.querySelectorAll(".tab-btn");
+
+	buttons.forEach((btn, i) => {
+		btn.addEventListener("click", () => {
+			panels.forEach(panel => {
+				panel.classList.remove("active");
+			});
+
+			buttons.forEach(btn => {
+				btn.classList.remove("active");
+			});
+
+			btn.classList.add("active");
+			panels[i].classList.add("active");
+		});
+	});
+};
+
+tab();
+
 mobileMenu();
