@@ -2,6 +2,9 @@
 
 .about {
 	padding-top: 100px;
+	@media screen and (max-width: 992px) {
+		padding-top: 60px;
+	}
 
 	&__container {
 	}
@@ -9,22 +12,45 @@
 	&__inner {
 		display: flex;
 		gap: 20px;
+		@media screen and (max-width: 768px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 15px;
+		}
+
+		@media screen and (max-width: 564px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__pic {
 		border-radius: 14px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		@media screen and (max-width: 1024px) {
+			display: none;
+		}
 	}
 
 	&__item {
 		flex-grow: 1;
+		flex-shrink: 1;
 		width: calc((100% - 20px) / 2);
+		min-height: 360px;
 
 		&.about-card {
 			transition: width 300ms linear;
 
-			@include hover {
+			&:hover {
 				width: 100%;
 			}
+		}
+
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			min-height: 320px;
 		}
 	}
 }
@@ -57,7 +83,37 @@
 		);
 	}
 
-	@include hover {
+	&:hover {
+		.about-card__title {
+			color: var(--yellow);
+			animation: fade 300ms ease-in-out;
+		}
+
+		.about-card__text {
+			display: block;
+			animation: fade 300ms ease-in-out;
+		}
+
+		.about-card__img {
+			filter: saturate(1);
+		}
+
+		.about-card__icon-wrapper {
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+
+		&::before {
+			background: linear-gradient(
+				360deg,
+				#282828 0%,
+				rgba(40, 40, 40, 0.83) 45.86%,
+				rgba(40, 40, 40, 0) 100%
+			);
+			height: 100%;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
 		.about-card__title {
 			color: var(--yellow);
 			animation: fade 300ms ease-in-out;
