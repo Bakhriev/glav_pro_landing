@@ -1,0 +1,80 @@
+@use "../helpers/mixins" as *;
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+
+	padding: 6px 6px 6px 20px;
+
+	border-radius: 15px;
+	box-shadow: 0 8px 16px -4px rgba(22, 34, 51, 0.15);
+	background-color: var(--yellow);
+
+	font-weight: 600;
+	font-size: 20px;
+	color: var(--black);
+
+	transition:
+		background-color 150ms ease,
+		color 150ms ease;
+
+	@include hover {
+		background-color: #1c1c1c;
+		color: var(--white);
+
+		.btn__icon {
+			background-color: var(--yellow);
+			svg {
+				rotate: 45deg;
+			}
+		}
+	}
+
+	&:active {
+		background-color: #1c1c1c;
+		color: var(--white);
+
+		.btn__icon {
+			background-color: var(--yellow);
+			svg {
+				rotate: 45deg;
+			}
+		}
+		scale: 0.99;
+	}
+
+	@media screen and (max-width: 768px) {
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 48px;
+		height: 48px;
+		background-color: var(--white);
+		border-radius: 14px;
+
+		transition: background-color 150ms ease;
+
+		@media screen and (max-width: 768px) {
+			width: 42px;
+			height: 42px;
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		svg {
+			transition: rotate 150ms ease;
+		}
+	}
+}

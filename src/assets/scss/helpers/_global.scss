@@ -28,3 +28,9 @@
 	max-width: $width + ($padding * 2);
 	width: 100%;
 }
+
+.hide-on-mobile {
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+}
