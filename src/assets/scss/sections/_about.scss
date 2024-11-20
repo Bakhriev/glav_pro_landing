@@ -1,0 +1,149 @@
+@use "../helpers/mixins" as *;
+
+.about {
+	padding-top: 100px;
+
+	&__container {
+	}
+
+	&__inner {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__pic {
+		border-radius: 14px;
+	}
+
+	&__item {
+		flex-grow: 1;
+		width: calc((100% - 20px) / 2);
+
+		&.about-card {
+			transition: width 300ms linear;
+
+			@include hover {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.about-card {
+	position: relative;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 30px;
+	border-radius: 14px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 236px;
+		transition: height 150ms ease;
+		background: linear-gradient(
+			360deg,
+			#282828 0%,
+			rgba(40, 40, 40, 0.83) 45.86%,
+			rgba(40, 40, 40, 0) 100%
+		);
+	}
+
+	@include hover {
+		.about-card__title {
+			color: var(--yellow);
+			animation: fade 300ms ease-in-out;
+		}
+
+		.about-card__text {
+			display: block;
+			animation: fade 300ms ease-in-out;
+		}
+
+		.about-card__img {
+			filter: saturate(1);
+		}
+
+		.about-card__icon-wrapper {
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+
+		&::before {
+			background: linear-gradient(
+				360deg,
+				#282828 0%,
+				rgba(40, 40, 40, 0.83) 45.86%,
+				rgba(40, 40, 40, 0) 100%
+			);
+			height: 100%;
+		}
+	}
+
+	&__icon-wrapper {
+		position: absolute;
+		z-index: 1;
+		top: 30px;
+		left: 30px;
+
+		width: 52px;
+		height: 52px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background-color: var(--black-lite);
+		border-radius: 14px;
+		transition: background-color 150ms ease-in-out;
+	}
+
+	&__img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		filter: saturate(0);
+		transition: filter 150ms ease-in-out;
+	}
+
+	&__info {
+		margin-top: auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 133%;
+		color: var(--white);
+		transition: opacity 150ms ease;
+		display: none;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
