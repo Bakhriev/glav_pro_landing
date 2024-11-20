@@ -111,6 +111,7 @@
 	}
 
 	@media screen and (max-width: 768px) {
+		padding: 20px;
 		.about-card__title {
 			color: var(--yellow);
 			animation: fade 300ms ease-in-out;
@@ -156,6 +157,11 @@
 		background-color: var(--black-lite);
 		border-radius: 14px;
 		transition: background-color 150ms ease-in-out;
+
+		@media screen and (max-width: 768px) {
+			top: 20px;
+			left: 20px;
+		}
 	}
 
 	&__img {
