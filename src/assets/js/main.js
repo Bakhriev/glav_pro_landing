@@ -31,6 +31,26 @@ const tab = () => {
 	});
 };
 
+const formValidate = () => {
+	const form = document.querySelector(".form");
+	const nameField = form.querySelector("#user-name");
+	const numberField = form.querySelector("#user-number");
+	const commentField = form.querySelector("#user-company-name");
+
+	form.addEventListener("submit", e => {
+		e.preventDefault();
+
+		// Ваш код...
+	});
+};
+
+IMask(document.getElementById("user-number"), {
+	mask: "+{7}(000)000-00-00",
+	lazy: false,
+});
+
+formValidate();
+
 tab();
 
 mobileMenu();
