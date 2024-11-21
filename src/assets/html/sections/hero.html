@@ -1,16 +1,19 @@
 <section class="hero">
 	<div class="container">
 		<div class="hero__info">
-			<h1 class="hero__title">
+			<h1 class="hero__title from-bottom" data-observer>
 				Сохраняем руки, ноги и жизни сотрудников ваших компаний через обучение
 			</h1>
-			<p class="hero__subtitle">
+			<p class="hero__subtitle from-bottom" data-observer>
 				Мы создали интерактивный формат обучения, который поможет каждому
 				освоить правила безопасности быстро и легко
 			</p>
 		</div>
 
-		<a href="#form" class="hero__btn btn btn-reset">
+		<a
+			href="#form"
+			class="hero__btn btn btn-reset from-bottom delay-1"
+			data-observer>
 			<span
 				>Попробуйте бесплатно
 				<span class="hide-on-mobile">прямо сейчас</span></span
@@ -23,7 +26,11 @@
 		</a>
 		<picture>
 			<source media="(max-width: 1300px)" srcset="./assets/img/hero_sm.png" />
-			<img src="./assets/img/hero.png" alt="" class="hero__img" />
+			<img
+				src="./assets/img/hero.png"
+				alt=""
+				class="hero__img from-right"
+				data-observer />
 		</picture>
 	</div>
 </section>

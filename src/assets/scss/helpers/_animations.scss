@@ -1,0 +1,19 @@
+.from-bottom {
+	transform: translateY(20px);
+}
+
+.from-left {
+	transform: translateX(-20px);
+}
+
+.from-right {
+	transform: translateX(20px);
+}
+
+.from-top {
+	transform: translateY(-20px);
+}
+
+[data-observer] {
+	opacity: 0;
+}

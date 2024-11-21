@@ -10,7 +10,7 @@
 				@include('./assets/html/sections/hero.html')
 				@include('./assets/html/sections/about.html')
 				@include('./assets/html/sections/why.html')
-				<div class="study">
+				<div class="study from-bottom" data-observer>
 					<div class="study__container container">
 						<div class="study__title"> С нашим обучением</div>
 						<div class="study__items">
@@ -40,7 +40,7 @@
 
 				<section class="learning">
 					<div class="learning__inner">
-						<div class="learning__block">
+						<div class="learning__block from-left" data-observer>
 							<div class="learning__icon"></div>
 							<div class="learning__info">
 								<h2 class="learning__title">Как выглядит обучение?</h2>
@@ -51,7 +51,7 @@
 							</div>
 						</div>
 
-						<div class="learning__tab tab">
+						<div class="learning__tab tab from-right" data-observer>
 							<div class="tab__top">
 								<div class="tab-buttons">
 									<button class="tab-btn active btn-reset">
@@ -103,7 +103,7 @@
 				<section class="game">
 					<div class="game__container container">
 						<div class="game__inner">
-							<div class="game__img-wrapper">
+							<div class="game__img-wrapper from-bottom" data-observer>
 								<img
 									width="232"
 									height="468"
@@ -114,10 +114,10 @@
 
 							<div class="game__content">
 								<div class="game__info">
-									<h2 class="game__title">
+									<h2 class="game__title from-top" data-observer>
 										Интерактивы, которые <span>вовлекают</span>
 									</h2>
-									<p class="game__text">
+									<p class="game__text from-right" data-observer>
 										Наши интерактивные практики помогают сотрудникам закрепить
 										знания
 									</p>
@@ -130,7 +130,9 @@
 										alt=""
 										class="game__img" />
 								</div>
-								<button class="game__btn btn btn-reset">
+								<button
+									class="game__btn btn btn-reset from-bottom"
+									data-observer>
 									<span>Перейти к игре</span>
 									<span class="btn__icon">
 										<svg width="22" height="22">
@@ -146,20 +148,20 @@
 				<section class="preview">
 					<div class="preview__container container">
 						<div class="preview__info">
-							<h2 class="preview__title">
+							<h2 class="preview__title from-left" data-observer>
 								<span>Учитесь</span> в любое время и в любом месте
 							</h2>
-							<p class="preview__subtitle">
+							<p class="preview__subtitle from-left" data-observer>
 								Доступно на всех устройствах — смартфонах, планшетах и ПК
 							</p>
-							<p class="preview__text">
+							<p class="preview__text from-left" data-observer>
 								Вы можете проходить курсы в любом месте - за компьютером в
 								офисе, на смартфоне или планшете на производстве или даже в
 								дороге! Удобно, быстро и всегда под рукой!
 							</p>
 						</div>
 
-						<div class="preview__images">
+						<div class="preview__images from-bottom" data-observer>
 							<div class="preview__image-row">
 								<img src="./assets/img/preview-1.png" alt="" />
 								<img src="./assets/img/preview-2.png" alt="" />
@@ -173,7 +175,7 @@
 					</div>
 				</section>
 
-				<section class="feedback">
+				<section class="feedback from-bottom" data-observer>
 					<div class="feedback__container container">
 						<div class="feedback__inner">
 							<img

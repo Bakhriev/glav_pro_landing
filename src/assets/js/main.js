@@ -1,3 +1,29 @@
+const observerItems = document.querySelectorAll("[data-observer]");
+
+const options = {
+	rootMargin: "0px",
+	threshold: 0.5,
+};
+const targets = [];
+const callback = entries => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			gsap.to(entry.target, {
+				opacity: 1,
+				x: 0,
+				y: 0,
+				stagger: 0.05,
+			});
+		}
+	});
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+observerItems.forEach(item => {
+	observer.observe(item);
+});
+
 const mobileMenu = () => {
 	const header = document.querySelector(".header");
 	const burger = header.querySelector(".header__burger");
