@@ -172,6 +172,96 @@
 						</div>
 					</div>
 				</section>
+
+				<section class="feedback">
+					<div class="feedback__container container">
+						<div class="feedback__inner">
+							<img
+								src="./assets/img/feedback.png"
+								alt=""
+								class="feedback__img feedback__img--mobile" />
+							<form action="#" class="feedback__form form" method="post">
+								<div class="form__fields">
+									<div class="field">
+										<label for="user-name" class="field__label"
+											>Ваше имя:</label
+										>
+										<input
+											type="text"
+											name="user-name"
+											id="user-name"
+											placeholder="Имя"
+											class="field__input input-reset input" />
+									</div>
+
+									<div class="field">
+										<label for="user-number" class="field__label"
+											>Ваш телефон:</label
+										>
+										<input
+											type="number"
+											name="user-number"
+											id="user-number"
+											placeholder="+7"
+											class="field__input input-reset input" />
+									</div>
+
+									<div class="field">
+										<label for="user-company-name" class="field__label"
+											>Название вашей компании</label
+										>
+										<input
+											type="number"
+											name="user-company-name"
+											id="user-company-name"
+											placeholder="Компания"
+											class="field__input input-reset input" />
+									</div>
+
+									<input
+										type="text"
+										class="input input-reset"
+										name="user-comment"
+										placeholder="Комментарий" />
+								</div>
+
+								<label class="custom-checkbox">
+									<input checked type="checkbox" class="sr-only" />
+									<span class="custom-checkbox__checkmark"></span>
+									<span>Я соглашаюсь на обработку персональных данных</span>
+								</label>
+
+								<button class="form__submit btn-reset btn">
+									<span>Получить демо-доступ</span>
+									<span class="btn__icon">
+										<svg width="22" height="22">
+											<use href="./assets/img/svg/sprite.svg#arrow_right"></use>
+										</svg>
+									</span>
+								</button>
+							</form>
+
+							<div class="feedback__content">
+								<div class="feedback__info-wrapper">
+									<div class="feedback__info">
+										<h2 class="feedback__title">
+											Попробуйте наше обучение <span>бесплатно</span>
+										</h2>
+										<p class="feedback__subtitle">
+											Оставьте заявку <br />
+											и получите демо-доступ к обучению
+										</p>
+									</div>
+								</div>
+
+								<img
+									src="./assets/img/feedback.png"
+									alt=""
+									class="feedback__img" />
+							</div>
+						</div>
+					</div>
+				</section>
 				<!--  -->
 			</main>
 			@include('./assets/html/components/footer.html')
