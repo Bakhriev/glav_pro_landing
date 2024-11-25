@@ -161,10 +161,6 @@
 	}
 
 	&__img-wrapper {
-		max-width: 100%;
-		width: 100%;
-		height: 500px;
-
 		border-radius: 14px;
 		backdrop-filter: blur(16px);
 		background: rgba(201, 201, 201, 0.34);
@@ -173,10 +169,6 @@
 		@media screen and (max-width: 992px) {
 			padding: 10px;
 			border-radius: 20px;
-		}
-
-		@media screen and (max-width: 375px) {
-			height: 626px;
 		}
 	}
 
