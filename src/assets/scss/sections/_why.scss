@@ -44,9 +44,7 @@
 			background-repeat: no-repeat;
 
 			@media screen and (max-width: 1024px) {
-				top: 160%;
-				left: auto;
-				right: 0;
+				display: none;
 			}
 		}
 
@@ -65,8 +63,7 @@
 			background-repeat: no-repeat;
 
 			@media screen and (max-width: 1024px) {
-				top: 223%;
-				right: auto;
+				display: none;
 			}
 		}
 
@@ -189,6 +186,43 @@
 			@include hover {
 				&::before {
 					border-color: #1c1c1c;
+				}
+			}
+		}
+
+		@media screen and (max-width: 1024px) {
+			position: relative;
+
+			&:first-child {
+				&::after {
+					content: "";
+					position: absolute;
+					width: 14px;
+					height: 24px;
+					background-image: url("../img/svg/decor_arrow_right.svg");
+					background-position: center center;
+					background-size: cover;
+					background-repeat: no-repeat;
+
+					bottom: -15px;
+					right: -4px;
+				}
+			}
+
+			&:nth-child(2) {
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: -13px;
+
+					width: 24px;
+					height: 26px;
+
+					background-image: url("../img/svg/play.svg");
+					background-position: center center;
+					background-size: cover;
+					background-repeat: no-repeat;
 				}
 			}
 		}
