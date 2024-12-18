@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+	@include('./template/_head.html')
+	<body>
+		<div class="app blog">
+			<main class="main">
+				<!--  -->
+				<section class="hero blog__hero">
+					<div class="blog__container container">
+						<nav aria-label="Breadcrumb">
+							<ol class="breadcrumb list-reset">
+								<li class="breadcrumb__item">
+									<a href="/">Главная</a>
+								</li>
+								<li class="breadcrumb__item">
+									<a aria-current="page">Блог</a>
+								</li>
+							</ol>
+						</nav>
+
+						<div class="hero__info">
+							<h1 class="hero__title from-bottom" data-observer>
+								сохраняем руки, ноги, жизни работников через обучение
+							</h1>
+							<ul class="list list-reset">
+								<li class="list__item">охрана труда</li>
+								<li class="list__item">пожарная безопасность</li>
+								<li class="list__item">экологическая безопасность</li>
+								<li class="list__item">+ 10 направлений</li>
+							</ul>
+						</div>
+
+						<a
+							href="#form"
+							class="hero__btn btn btn-reset from-bottom delay-1"
+							data-observer>
+							<span>Все направления ГлавПро</span>
+							<span class="btn__icon">
+								<svg width="22" height="22">
+									<use href="./assets/img/svg/sprite.svg#arrow_right"></use>
+								</svg>
+							</span>
+						</a>
+					</div>
+				</section>
+
+				<!--  -->
+			</main>
+			@include('./assets/html/components/footer.html')
+		</div>
+		@include('./template/_scripts.html')
+	</body>
+</html>

@@ -17,6 +17,9 @@
 @use "./components/burger";
 @use "./components/buttons";
 
+// New css
+@use "./components/breadcrumb";
+
 // Sections
 @use "./sections/hero";
 @use "./sections/about";
@@ -28,4 +31,5 @@
 @use "./sections/feedback";
 
 // Pages
-@use "./pages/home";
+// New css
+@use "./pages/blog";

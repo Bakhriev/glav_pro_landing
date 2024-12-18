@@ -1,0 +1,47 @@
+@use "../helpers/mixins" as *;
+
+.breadcrumb {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	padding: 14px 0;
+
+	&__item {
+		position: relative;
+
+		padding-right: 15px;
+
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		color: #bbb;
+
+		transition: color 150ms ease-in-out;
+
+		&:not(:last-child) {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				width: 5px;
+				height: 10px;
+				background-image: url("../img/svg/arrow_right.svg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+
+		&:last-child {
+			font-weight: 500;
+			color: #fff;
+		}
+
+		@include hover {
+			color: #fff;
+		}
+	}
+}
