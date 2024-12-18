@@ -6,4 +6,24 @@ html {
 	color: var(--black-lite);
 }
 
-// h1-h6, a
+.title-2 {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #000;
+
+	@media screen and (max-width: 768px) {
+		font-size: 20px;
+		line-height: 1.25;
+		text-align: center;
+		color: #000;
+	}
+}
+
+.title-3 {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 18px;
+	color: #444343;
+}
