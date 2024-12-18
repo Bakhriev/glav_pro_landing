@@ -403,15 +403,13 @@
 		text-align: center;
 		color: #6a6a6a;
 
-		box-shadow:
-			0 0 20px 0 rgba(22, 34, 51, 0.07),
-			0 4px 8px -4px rgba(22, 34, 51, 0.05);
 		background-color: #fff;
 
 		transition:
 			color 150ms ease-in-out,
 			background-color 150ms ease-in-out,
-			border-color 150ms ease-in-out;
+			border-color 150ms ease-in-out,
+			box-shadow 150ms ease-in-out;
 
 		&.active {
 			background: #444343;
@@ -421,15 +419,15 @@
 
 		&[href] {
 			@include hover {
-				background: #444343;
-				color: #fff;
-				border-color: #444343;
+				box-shadow:
+					0 0 20px 0 rgba(22, 34, 51, 0.07),
+					0 4px 8px -4px rgba(22, 34, 51, 0.05);
 			}
 
 			&:focus-visible {
-				background: #444343;
-				color: #fff;
-				border-color: #444343;
+				box-shadow:
+					0 0 20px 0 rgba(22, 34, 51, 0.07),
+					0 4px 8px -4px rgba(22, 34, 51, 0.05);
 			}
 		}
 	}
